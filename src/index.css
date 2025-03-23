@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+.board {
+  background-image: url("/board.avif");
+  background-position: center;
+  background-clip: border-box;
+  background-repeat: no-repeat;
+}
