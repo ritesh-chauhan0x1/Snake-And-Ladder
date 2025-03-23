@@ -1,8 +1,8 @@
 import React from "react";
-import Game from "./components/Game";
+import SnakeLadder from "./components/SnakeLadder";
 
 const App = () => {
-  return <Game />;
+  return <SnakeLadder />;
 };
 
 export default App;
