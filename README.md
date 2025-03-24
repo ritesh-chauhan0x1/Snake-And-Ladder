@@ -32,7 +32,7 @@ Audio API – Dice roll sound effects
 1. Clone the repository:
 
 ```sh
-git clone https://github.com/yourusername/snake-ladder-react.git
+git clone https://github.com/shahrohit/Snake-And-Ladder.git
 ```
 
 2. Navigate to the project folder:
