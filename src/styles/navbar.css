@@ -1,0 +1,13 @@
+.main-navbar {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.nav-btn {
+  transition: background 0.2s, box-shadow 0.2s;
+  font-weight: 500;
+}
+
+.nav-btn:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}

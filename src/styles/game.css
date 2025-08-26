@@ -1,0 +1,117 @@
+
+.game-board-wrapper {
+  min-height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+.game-board {
+  background: url('/board.png') center/cover no-repeat;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 60vw;
+  max-height: 700px;
+  min-height: 400px;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  overflow: visible;
+}
+
+.player-token-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  transition: opacity 0.7s, transform 0.7s, box-shadow 0.3s;
+  opacity: 1;
+}
+.token-highlight {
+  box-shadow: 0 0 0 6px #facc15, 0 0 16px 8px rgba(251,191,36,0.25), 0 0 0 12px rgba(251,191,36,0.08);
+  z-index: 10;
+}
+.token-animate {
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: tokenFadeIn 0.8s forwards;
+}
+@keyframes tokenFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.player-token-img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.22), 0 0 0 4px #fff;
+  margin-bottom: 8px;
+}
+.player-meta {
+  background: rgba(255,255,255,0.92);
+  border-radius: 10px;
+  padding: 6px 16px;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  min-width: 120px;
+  justify-content: center;
+}
+.color-badge {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 6px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #e5e7eb;
+}
+.bg-red { background: #ef4444; }
+.bg-blue { background: #3b82f6; }
+.bg-green { background: #22c55e; }
+.bg-black { background: #222; }
+.outline-red { outline: 3px solid #ef4444; }
+.outline-blue { outline: 3px solid #3b82f6; }
+.outline-green { outline: 3px solid #22c55e; }
+.outline-black { outline: 3px solid #222; }
+.player-name { font-weight: 700; letter-spacing: 0.5px; }
+.player-score { font-size: 0.95em; color: #666; }
+/* Responsive board and tokens */
+@media (max-width: 900px) {
+  .game-board {
+    max-width: 98vw;
+    height: 60vw;
+    min-height: 320px;
+  }
+  .player-token-img {
+    width: 40px;
+    height: 40px;
+  }
+  .player-meta {
+    min-width: 80px;
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 600px) {
+  .game-board {
+    min-height: 220px;
+    height: 60vw;
+  }
+  .player-token-img {
+    width: 28px;
+    height: 28px;
+  }
+  .player-meta {
+    min-width: 60px;
+    font-size: 0.85rem;
+    padding: 2px 6px;
+  }
+}
