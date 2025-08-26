@@ -45,9 +45,12 @@ This is a web-based Snake and Ladder game developed using React.js, now supporti
    ```sh
    npm run start:server
    ```
+   > **Troubleshooting:**
+   > - If you see an error about `require` not defined, make sure you are using Node.js v16+ and that `server/index.js` uses only `import` (not `require`).
+   > - If you see an error about `npm start` not found, use `npm run dev` to start the frontend (Vite default).
 3. In a new terminal, start the frontend:
    ```sh
-   npm start
+   npm run dev
    ```
 4. Open your browser at [http://localhost:5173](http://localhost:5173)
 
