@@ -1,57 +1,80 @@
-# 🎲 Snake and Ladder Game in React
 
-This is a web-based Snake and Ladder game developed using React.js. It features a Person vs. Bot mode, smooth animations, dice roll sound effects, and a responsive design. The game follows traditional Snakes and Ladders rules, with a bot opponent that automatically rolls the dice and moves accordingly.
+# 🎲 Snake and Ladder Game in React (2–4 Player Edition)
+
+This is a web-based Snake and Ladder game developed using React.js, now supporting 2–4 player gameplay (with bots or friends), a backend for game state, and a polished, responsive UI.
 
 ## 🚀 Features
 
-- Single Player vs. AI (Bot)
-- Smooth Animations for Player Movement
-- Clickable Dice Roll with Sound Effects
-- Dynamic Snake and Ladder Logic
-- Game Win/Loss
-- Fully Responsive Design (Mobile & Desktop)
+- Play with Bot (2–4 players, bots auto-play)
+- Play with Friend (2–4 players, enter names/colors)
+- Animated player tokens, colored outlines, and card-like HUD
+- Turn-based logic, bot automation, and dice roll
+- Backend (Express) for game creation and state
+- Sound effects (click)
+- Fully responsive and accessible design
 
 ## 🛠️ Technologies Used
 
-React.js – Component-based UI structure
+- React.js (component-based UI)
+- Express.js (backend API)
+- Tailwind CSS + custom CSS
+- JavaScript (ES6+)
+- HTML5
 
-CSS3 – Animations and styling
+## 📂 Files Added/Modified (feature/game-play-2to4 branch)
 
-JavaScript (ES6+) – Game logic and event handling
+- `src/components/MainNavbar.jsx` — Top navigation bar
+- `src/components/GameScreen.jsx` — Main game board and controls
+- `src/components/PlayerToken.jsx` — Player token with animation
+- `src/components/PlayerSetupModal.jsx` — Modal for player count/name/color
+- `src/context/GameContext.jsx` — Game state, turn, dice, bot logic
+- `src/styles/navbar.css` — Navbar styles
+- `src/styles/game.css` — Board, token, HUD, responsive styles
+- `src/assets/players/red.png`, `blue.png`, `green.png`, `black.png` — Player tokens
+- `src/assets/sounds/click.mp3` — Sound effect
+- `server/index.js` — Express backend
+- `package.json` — Backend scripts and dependencies
 
-HTML5 – Structuring the game board
+## 📦 How to Run
 
-Audio API – Dice roll sound effects
+1. Install dependencies:
+   ```sh
+   npm install
+   ```
+2. Start the backend server (port 4000):
+   ```sh
+   npm run start:server
+   ```
+3. In a new terminal, start the frontend:
+   ```sh
+   npm start
+   ```
+4. Open your browser at [http://localhost:5173](http://localhost:5173)
 
-## Screenshot
+## 🧪 Demo Checklist
 
-![Game Board](public/game_image.png)
+- [ ] Click **Play with Bot**: game starts, tokens placed, bots auto-play
+- [ ] Click **Play with Friend**: modal for 2–4 players, then name/color entry, then game starts
+- [ ] Turn order cycles, current player glows
+- [ ] Tokens use red, blue, green, black PNGs (no duplicates)
+- [ ] Responsive: tokens/HUD do not overlap on small screens
+- [ ] Backend logs game creation and state requests
+- [ ] Play/Reset buttons work
 
-## 📦 Installation & Running the Game
+## ⚠️ Known Limitations & Next Improvements
 
-1. Clone the repository:
+- Player name/color entry modal is basic (can be improved for validation)
+- No persistent backend (in-memory only)
+- No full board logic (just demo token movement)
+- Sound effects are minimal (add more for dice, win, etc.)
 
-```sh
-git clone https://github.com/shahrohit/Snake-And-Ladder.git
-```
+## 📝 Commit Messages
 
-2. Navigate to the project folder:
+- Each commit is self-contained with a one-line message.
+- Final commit: `chore: finish game MVP - navbar, setup, tokens and backend`
 
-```sh
-cd snake-ladder-react
-```
+---
 
-3. Install dependencies:
+**Branch:** `feature/game-play-2to4`
 
-```sh
-npm install
-```
-
-4. Start the development server:
-
-```sh
-npm run dev
-```
-
-5. Open your browser and visit:
-   [http://localhost:5173](http://localhost:5173)
+---
